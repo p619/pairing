@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Pairing View Controller-->
+        <!--快來配對-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="pairingViewController" customModule="_115pairing" customModuleProvider="target" sceneMemberID="viewController">
@@ -41,21 +41,6 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="配對"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fHD-Ja-UNd">
-                                <rect key="frame" x="0.0" y="247" width="535" height="481"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button" image="n"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pQD-Bq-GXC">
-                                <rect key="frame" x="-85" y="348" width="599" height="342"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button" image="q"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7eZ-a5-ruO">
-                                <rect key="frame" x="0.0" y="348" width="459" height="575"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button" image="y"/>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rzu-7I-2Me">
                                 <rect key="frame" x="83" y="271" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -68,11 +53,11 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="1" maxValue="170" translatesAutoresizingMaskIntoConstraints="NO" id="WuW-M2-bKP">
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="140" minValue="140" maxValue="170" translatesAutoresizingMaskIntoConstraints="NO" id="WuW-M2-bKP">
                                 <rect key="frame" x="145" y="271" width="118" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
-                                    <action selector="heightslider:" destination="BYZ-38-t0r" eventType="valueChanged" id="iQD-WB-YFs"/>
+                                    <action selector="heightslider:" destination="BYZ-38-t0r" eventType="valueChanged" id="G8z-d8-Zha"/>
                                 </connections>
                             </slider>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LSb-j8-OOc">
@@ -88,14 +73,14 @@
                                 </segments>
                             </segmentedControl>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PAf-aS-0uv">
-                                <rect key="frame" x="286" y="276" width="42" height="21"/>
+                                <rect key="frame" x="278" y="276" width="88" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S6n-Na-JXX">
-                                <rect key="frame" x="0.0" y="342" width="392" height="8"/>
+                                <rect key="frame" x="0.0" y="342" width="414" height="8"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             </button>
@@ -106,24 +91,38 @@
                                     <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="pairbtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="exY-Ej-5im"/>
+                                    <action selector="pairbtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kWz-W1-m2x"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="n" translatesAutoresizingMaskIntoConstraints="NO" id="HzI-xa-gtq">
+                                <rect key="frame" x="0.0" y="358" width="375" height="309"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="y" translatesAutoresizingMaskIntoConstraints="NO" id="O5f-iE-0Gl">
+                                <rect key="frame" x="0.0" y="358" width="375" height="309"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="q" translatesAutoresizingMaskIntoConstraints="NO" id="AvJ-Ch-BZf">
+                                <rect key="frame" x="0.0" y="343" width="375" height="324"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
-                    <navigationItem key="navigationItem" id="xnM-uO-2YZ"/>
+                    <navigationItem key="navigationItem" title="快來配對" id="xnM-uO-2YZ"/>
                     <connections>
-                        <outlet property="agebtn" destination="MOy-cQ-1Xy" id="FCu-go-A7K"/>
-                        <outlet property="heightslider" destination="WuW-M2-bKP" id="lsi-xh-5LE"/>
+                        <outlet property="agebtn" destination="MOy-cQ-1Xy" id="bjw-4C-Ux5"/>
                         <outlet property="heightvalue" destination="PAf-aS-0uv" id="g7x-Dr-aXk"/>
                         <outlet property="horoscopebtn" destination="y1H-77-1EX" id="Md1-Ig-blJ"/>
+                        <outlet property="npic" destination="HzI-xa-gtq" id="BQp-la-mej"/>
+                        <outlet property="qpic" destination="AvJ-Ch-BZf" id="Rtq-ww-4PZ"/>
                         <outlet property="skibtn" destination="LSb-j8-OOc" id="1CF-cU-HwC"/>
+                        <outlet property="ypic" destination="O5f-iE-0Gl" id="i8Z-yG-e9Y"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1148" y="117.39130434782609"/>
+            <point key="canvasLocation" x="1352.8" y="108.39580209895054"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="exq-7O-xzB">

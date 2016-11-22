@@ -10,35 +10,51 @@ import UIKit
 
 class pairingViewController: UIViewController {
 
-    @IBOutlet weak var qpic: UIButton!
-    @IBOutlet weak var ypic: UIButton!
+
+    @IBOutlet weak var ypic: UIImageView!
     
-    @IBOutlet weak var npic: UIButton!
-    
-    @IBOutlet weak var agebtn: UISegmentedControl!
+    @IBOutlet weak var qpic: UIImageView!
+
+    @IBOutlet weak var npic: UIImageView!
     
     @IBOutlet weak var horoscopebtn: UITextField!
     
+    @IBOutlet weak var agebtn: UISegmentedControl!
     
     @IBOutlet weak var skibtn: UISwitch!
     
     
-    var hv = 140
+    var hv:Int = 140
 
     
     @IBOutlet weak var heightvalue: UILabel!
     
-    @IBAction func heightslider(_ sender: UISlider) {
+    @IBAction func heightslider(_ sender: UISlider)
+    {
         heightvalue.isHidden = false
         hv = Int(sender.value)
-        heightvalue.text = "\(hv)"
-    
+        heightvalue.text = "\(hv)公分"
+
     }
     
-    @IBAction func pairbtn(_ sender: Any) {
+    @IBAction func pairbtn(_ sender: Any)
+    { let horoscope:String = self.horoscopebtn.text!
+        if horoscope == "gemini" && skibtn.isOn == true && agebtn.selectedSegmentIndex == 1 && hv == 153
+        { ypic.isHidden = false
+            npic.isHidden = true
+            qpic.isHidden = true
+        }
+        else{
+            ypic.isHidden  = true
+            npic.isHidden = false
+            qpic.isHidden = true
+
+        }
     }
     
-    
+  
+
+
     
     
     
